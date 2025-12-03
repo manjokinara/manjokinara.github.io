@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulir Umpan Balik – HSI BS</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header id="page-header">
+      <h1 id="page-title">Formulir Umpan Balik</h1>
+      <h3 class="subtitle">Kritik, Saran, dan Masukan</h3>
+      <hr />
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="biodata.html">Biodata</a></li>
+          <li><a href="jadwal.html">Jadwal</a></li>
+          <li><a href="galeri.html">Galeri</a></li>
+          <li><a href="feedback.html" class="active">Feedback</a></li>
+        </ul>
+      </nav>
+      <hr />
+    </header>
+
+    <section class="box">
+      <h3 class="section-title">Formulir Kontak & Saran</h3>
+      <p>
+        Berikan masukan terbaik Anda untuk pengembangan website profil ini.
+        Semua input bersifat wajib kecuali nama.
+      </p>
+
+      <form action="#" method="POST" class="feedback-form">
+        <div class="form-group">
+          <label for="nama">Nama Anda (Opsional):</label>
+          <input type="text" id="nama" name="nama" placeholder="Tulis nama Anda" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Anda:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="nama@email.com"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="rating">Rating Kepuasan Website (Skala 1-10):</label>
+          <input
+            type="number"
+            id="rating"
+            name="rating"
+            min="1"
+            max="10"
+            required
+            placeholder="Masukkan angka 1 hingga 10"
+          />
+        </div>
+
+        <div class="form-group">
+          <label>Rekomendasi Website Ini?</label>
+          <div class="radio-group">
+            <label
+              ><input type="radio" name="rekomendasi" value="ya" required />
+              Ya, Sangat</label
+            >
+            <label
+              ><input type="radio" name="rekomendasi" value="mungkin" /> Mungkin
+              Saja</label
+            >
+            <label
+              ><input type="radio" name="rekomendasi" value="tidak" /> Tidak
+              </label
+            >
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Topik yang paling menarik:</label>
+          <div class="checkbox-group">
+            <label
+              ><input type="checkbox" name="topik" value="biodata" />
+              Biodata</label
+            >
+            <label
+              ><input type="checkbox" name="topik" value="jadwal" /> Jadwal</label
+            >
+            <label
+              ><input type="checkbox" name="topik" value="galeri" />
+              Galeri</label
+            >
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="saran-bidang">Saran Pengembangan di Bidang:</label>
+          <select id="saran-bidang" name="saran-bidang" required>
+            <option value="">-- Pilih Bidang --</option>
+            <option value="desain">Desain (Tampilan)</option>
+            <option value="konten">Konten (Isi)</option>
+            <option value="fungsi">Fungsionalitas</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="pesan">Pesan/Saran Lengkap:</label>
+          <textarea
+            id="pesan"
+            name="pesan"
+            rows="5"
+            required
+            placeholder="Tulis pesan dan saran Anda secara detail di sini..."
+          ></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="reset" class="btn-reset">Atur Ulang</button>
+          <button type="submit" class="btn-submit">Kirim Feedback</button>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
